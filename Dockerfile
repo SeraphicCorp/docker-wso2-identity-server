@@ -1,11 +1,17 @@
 # WSO2 Identity Server
 
-FROM openjdk:8
+FROM sgrio/java-oracle:jdk_8
 MAINTAINER Ravaka Razafimanantsoa <ravseraphin+docker-wso2-base@gmail.com>
 
 ENV PRODUCT_NAME="identity-server" \
     PRODUCT_SHORT_NAME="is" \
     VERSION="5.3.0"
+    
+# Install packages
+RUN apt-get update \
+    && apt-get install --no-install-recommends -y \
+      unzip \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt
 ADD ./wso2${PRODUCT_SHORT_NAME}-${VERSION}.zip /opt/wso2${PRODUCT_SHORT_NAME}-${VERSION}.zip
