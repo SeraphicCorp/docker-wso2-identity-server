@@ -5,8 +5,8 @@ MAINTAINER Ravaka Razafimanantsoa <ravseraphin+docker-wso2-base@gmail.com>
 
 ENV PRODUCT_NAME="identity-server" \
     PRODUCT_SHORT_NAME="is" \
-    VERSION="5.4.0-update6"
-    
+    VERSION="5.4.1"
+
 # Install packages
 RUN apt-get update \
     && apt-get install --no-install-recommends -y \
