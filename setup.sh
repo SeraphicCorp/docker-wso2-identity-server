@@ -2,6 +2,6 @@
 
 HOSTNAME=`hostname`
 
-grep -rl 'localhost' /opt/wso2/repository/conf | xargs sed -i "s/localhost/$HOSTNAME/g"
+find /opt/wso2/repository/conf -type f -exec sed -i "s/localhost/$HOSTNAME/g" {} \;
 
 exit 0

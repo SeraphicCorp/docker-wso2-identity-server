@@ -1,8 +1,6 @@
 # WSO2 Identity Server
 
 FROM sgrio/java-oracle:jdk_8
-MAINTAINER Ravaka Razafimanantsoa <ravseraphin+docker-wso2-base@gmail.com>
-
 ENV PRODUCT_NAME="identity-server" \
     PRODUCT_SHORT_NAME="is" \
     VERSION="5.4.1"
